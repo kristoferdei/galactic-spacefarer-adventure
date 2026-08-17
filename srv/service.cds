@@ -7,6 +7,7 @@ service SpacefarerService {
     { grant: 'READ',                          to: 'authenticated-user' },
     { grant: ['CREATE', 'UPDATE', 'DELETE'],  to: 'admin' }
   ]
+  @odata.draft.enabled
   entity Spacefarers as projection on sf.Spacefarers;
 
   @readonly

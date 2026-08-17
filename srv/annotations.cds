@@ -38,11 +38,11 @@ annotate service.Spacefarers with @(
   },
 
   UI.FieldGroup#Assignment: {
-    Data: [
-      { Value: department_ID, Label: 'Department' },
-      { Value: position_ID,   Label: 'Position' }
-    ]
-  },
+      Data: [
+        { Value: department.name, Label: 'Department' },
+        { Value: position.title,  Label: 'Position' }
+      ]
+    },
 
   UI.HeaderInfo: {
     TypeName      : 'Spacefarer',
