@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# CAP build output
+gen/
+target/
+_out/
+resources/
+
+# Local/private CAP config
+.cdsrc-private.json
+default-*.json
+
+# Databases
+*.sqlite
+*.db
+
+# MTA build artifacts
+mta_archives/
+*_mta_build_tmp
+*.mtar
+
+# Generated types
+@cds-models
+
+# Env / secrets
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+.idea/
