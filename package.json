@@ -14,6 +14,16 @@
     "start": "cds-serve",
     "watch-spacefarerapp": "cds watch --open galactic.spacefarer.ui.spacefarerapp/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
+  "cds": {
+    "requires": {
+      "auth": {
+        "users": {
+          "alice": { "roles": ["admin"], "attr": { "planet": "Earth" } },
+          "bob":   { "attr": { "planet": "Mars" } }
+        }
+      }
+    }
+  },
   "private": true,
   "workspaces": [
     "app/*"
