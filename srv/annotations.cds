@@ -31,6 +31,7 @@ annotate service.Spacefarers with @(
     Data: [
       { Value: name },
       { Value: originPlanet },
+      { Value: email },
       { Value: spacesuitColor },
       { Value: stardustCollection },
       { Value: wormholeSkill }

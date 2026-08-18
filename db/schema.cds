@@ -4,6 +4,7 @@ using { cuid, managed } from '@sap/cds/common';
 
 entity Spacefarers : cuid, managed {
   name                : String(100) not null;
+  email               : String(255);
   stardustCollection  : Integer default 0;
   wormholeSkill       : String(20) enum { novice; adept; master } default 'novice';
   originPlanet        : String(50);

@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@sap/cds": "^10.0.5",
+    "nodemailer": "^9.0.5",
     "sqlite3": "^6.0.1"
   },
   "devDependencies": {
@@ -18,8 +19,19 @@
     "requires": {
       "auth": {
         "users": {
-          "alice": { "roles": ["admin"], "attr": { "planet": "Earth" } },
-          "bob":   { "attr": { "planet": "Mars" } }
+          "alice": {
+            "roles": [
+              "admin"
+            ],
+            "attr": {
+              "planet": "Earth"
+            }
+          },
+          "bob": {
+            "attr": {
+              "planet": "Mars"
+            }
+          }
         }
       }
     }

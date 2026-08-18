@@ -1,4 +1,4 @@
-ID,name,stardustCollection,wormholeSkill,originPlanet,spacesuitColor,department_ID,position_ID
-3c1a0b2e-0000-4000-8000-000000000001,Zara Nova,150,master,Earth,Silver,1c1a0b2e-0000-4000-8000-000000000001,2c1a0b2e-0000-4000-8000-000000000001
-3c1a0b2e-0000-4000-8000-000000000002,Kip Orbit,40,adept,Mars,Crimson,1c1a0b2e-0000-4000-8000-000000000002,2c1a0b2e-0000-4000-8000-000000000002
-3c1a0b2e-0000-4000-8000-000000000003,Lira Comet,5,novice,Vulcan,Gold,1c1a0b2e-0000-4000-8000-000000000003,2c1a0b2e-0000-4000-8000-000000000003
+ID,name,email,stardustCollection,wormholeSkill,originPlanet,spacesuitColor,department_ID,position_ID
+3c1a0b2e-0000-4000-8000-000000000001,Zara Nova,zara.nova@galactic-spacefarers.example,150,master,Earth,Silver,1c1a0b2e-0000-4000-8000-000000000001,2c1a0b2e-0000-4000-8000-000000000001
+3c1a0b2e-0000-4000-8000-000000000002,Kip Orbit,kip.orbit@galactic-spacefarers.example,40,adept,Mars,Crimson,1c1a0b2e-0000-4000-8000-000000000002,2c1a0b2e-0000-4000-8000-000000000002
+3c1a0b2e-0000-4000-8000-000000000003,Lira Comet,lira.comet@galactic-spacefarers.example,5,novice,Vulcan,Gold,1c1a0b2e-0000-4000-8000-000000000003,2c1a0b2e-0000-4000-8000-000000000003
