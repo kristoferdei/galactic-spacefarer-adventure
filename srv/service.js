@@ -4,11 +4,18 @@ import { sendWelcomeEmail } from './lib/mailer.js';
 export default cds.service.impl(async function () {
   const { Spacefarers } = this.entities;
 
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   this.before('CREATE', Spacefarers, async (req) => {
-    const { stardustCollection, wormholeSkill } = req.data;
+    const { stardustCollection, wormholeSkill, email } = req.data;
 
     if (stardustCollection != null && stardustCollection < 0) {
       req.error(400, 'Stardust collection cannot be negative, cadet.');
+      return;
+    }
+
+    if (email && !EMAIL_RE.test(email)) {
+      req.error(400, `'${email}' doesn't look like a valid email address, cadet.`);
       return;
     }
 

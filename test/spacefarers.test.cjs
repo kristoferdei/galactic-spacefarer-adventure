@@ -50,6 +50,28 @@ test('CREATE rejects negative stardust collection on activation (Task 3: @before
     );
 });
 
+test('CREATE rejects invalid email format on activation (Task 3: @before validation)', async () => {
+    const draft = await POST(
+        `${SRV}/Spacefarers`,
+        { name: 'Bad Email', email: 'not-an-email' },
+        { auth: { username: 'alice' } }
+    );
+    const { ID } = draft.data;
+
+    await assert.rejects(
+        POST(
+            `${SRV}/Spacefarers(ID=${ID},IsActiveEntity=false)/SpacefarerService.draftActivate`,
+            {},
+            { auth: { username: 'alice' } }
+        ),
+        (err) => {
+            assert.equal(err.status, 400);
+            assert.match(err.message, /valid email/);
+            return true;
+        }
+    );
+});
+
 test('CREATE applies defaults and sends the welcome email on activation (Task 3: @before/@after)', async () => {
     const draft = await POST(
         `${SRV}/Spacefarers`,
